@@ -6,6 +6,10 @@ VERSION=20120620
 %:
 	dh $@
 
+override_dh_make:
+	make cloneLib
+	make
+
 override_dh_auto_install:
 	mkdir -p $(DEB_DIR)/usr/bin
 	install -m 755 src/verifyBamID $(DEB_DIR)/usr/bin/verifyBamID$(VERSION)
