@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
-DEB_DIR=debian/verify-bam-id
 VERSION=20120620
+DEB_DIR=debian/verify-bam-id$(VERSION)
 
 %:
 	dh $@
