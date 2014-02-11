@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+DEB_DIR=debian/verifyBamId
+VERSION=20120620
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	mkdir -p $(DEB_DIR)/usr/bin
+	install -m 755 src/verifyBamID $(DEB_DIR)/usr/bin/verifyBamID$(VERSION)
+
+override_dh_strip:
+	echo "Do not create a *dbgsym*.ddeb package."
