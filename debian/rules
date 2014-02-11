@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-DEB_DIR=debian/verifyBamId
+DEB_DIR=debian/verify-bam-id
 VERSION=20120620
 
 %:
