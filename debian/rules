@@ -7,7 +7,6 @@ VERSION=20120620
 	dh $@
 
 override_dh_auto_clean:
-	$(MAKE) clean
 
 override_dh_auto_build:
 	dh_auto_build -- cloneLib
